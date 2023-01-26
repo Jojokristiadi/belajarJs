@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    <script>
+        //alternatif buat function =>
+
+        //pembatasan
+        //tidak punya argumen
+        //gk bisa arrow generator
+        //gk bisa akses this
+        // gk bsa ases super
+
+        //bentuk
+
+        const sayHello = (Name)=>{
+            const say = `Hello ${Name}`
+            console.info(say)
+        }
+        sayHello("Rendi")
+
+        //bisa lebih singkat
+        const sayHello2 = (names) => console.info(`Hello ${names}`)
+        sayHello2("Bagas")
+
+        //tak perlu return
+
+        // const number = (first, second)=>{
+        //     return first + second;
+        // }
+
+        const number = (first, second) => first + second;
+        console.info(number(100,200))
+    </script>
+</body>
+</html>

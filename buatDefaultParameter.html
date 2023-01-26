@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>buat default parameter</title>
+</head>
+<body>
+    <script>
+        //Seperti yang kita tahu, bahwa parameter di js itu bisa dikosongkan (optional)
+        // namun kita bisa mengisi defaultnya
+
+        function Nama(firstName, middleName, lastName = " "){
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+        }
+
+        Nama("Rudi", "Reza", "Rahadian");
+        Nama("Anggita", "Sari");
+        Nama("Bagas", undefined);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annonymus Function</title>
+</head>
+<body>
+    <script>
+        //function bisa annomyus
+        //func masukin ke var
+
+        let testing = function(name){
+            console.info(`Hello ${name}`);
+        };
+        testing("eko")
+
+        //bisa masukkin ke parameter
+
+        function giveMeName(callback){
+            callback = "Eko"
+        }
+        giveMeName(testing)
+
+        giveMeName(function(name){
+            document.writeln(`<p>Hi ${name}</p>`)
+        });
+    </script>
+</body>
+</html>

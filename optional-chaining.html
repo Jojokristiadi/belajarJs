@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optional Chaining</title>
+</head>
+<body>
+    <script>
+        //berfungsi untuk mengamankan bila ingin akses property yang nullish
+        //bila tanpa pake optional chaining buat akses nullish maka eror
+
+        //contoh
+
+/*        let name = {};
+        const country = name.firstname.country;
+        document.writeln(`${country}`);*/
+
+        // tidak akan jalan
+
+        //bisa pakai ini:
+
+
+                let address = {
+                    firstname:{
+                        country : "Indonesia"
+                    }
+                };
+        const country = address?.firstname?.country;
+        document.writeln("SUKSES")
+        document.writeln(`${country}`);
+        document.write("SUkses") 
+    </script>
+</body>
+</html>

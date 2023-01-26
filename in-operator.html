@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In operators</title>
+</head>
+<body>
+    <script>
+        //berfungsi untuk mengecek apakah sebuah properti ada dalam object atau tidak
+        //bila didalam object, maka true, selain itu false.
+        //bisa mengecek untuk indeks array
+
+        // const person ={
+        //     firstName: "Joshua",
+        //     lastName: "Kristiadi"
+        // };
+
+        // if("firstName" in person){
+        //     alert("Ada kok!");
+        // }else{
+        //     alert("Tidak ada!");
+        // }
+
+        //in operator bodo amat dengan isi pada object atau array, 
+        // kalau undefined atau null, tetap dibilang ada
+
+        const person= {
+            namaDepan: null,
+            namaBelakang: "Kristiadi"
+        };
+        if("namaDepan" in person){
+            alert("Ada kok!");
+        }else{
+            alert("Tidak ada!");
+        }
+    </script>
+</body>
+</html>

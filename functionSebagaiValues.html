@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUnction sebagai value</title>
+</head>
+<body>
+    <script>
+        //functin bisa sebagai value
+
+        function sayHello(name){
+            console.log(`Hello, ${name}`);
+
+        }
+        //memanggil function dalam variabel
+        let hello = sayHello;
+
+        //bisa pakai 2 nih
+        sayHello("Rangga");
+        hello("Rudi")
+
+const say = sayHello;
+say("Dimas")
+
+
+        function givemeName(callback){
+            callback ="Dimas"
+        }
+        givemeName(sayHello)
+        givemeName(say)
+    </script>
+</body>
+</html>

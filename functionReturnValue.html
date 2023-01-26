@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>func return value</title>
+</head>
+<body>
+    <script>
+        //function tidak membalikan value
+        //agar bisa balikan value, gunakan kata kunci dalam functionnya
+
+        //contoh
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`;
+            return say; 
+        }
+
+        let result = sayHello("Eko", "Putranto");
+        document.writeln(result);
+
+        //function return value bisa dipakai berulang kali!
+
+        function getFinalValue(value){
+            if(value>90){
+                return `Nilai ${value} lulus memuaskan`;
+            }else if(value > 80){
+                return `Nilai ${value} lulus ujian`;
+            }else{
+                return "Mengulang pelajaran";
+            }
+        }
+        let hasil = getFinalValue(86);
+        document.writeln(hasil);
+
+        //berfungsi untuk menghentikan eksekusi
+
+        function isCountain(array, searchValue){
+            for(const element of array){
+                if(element === searchValue){
+                    return true;
+                }
+                
+            }
+            return false;
+        }
+        console.info(isCountain([1,2,3,4,5,6,7,9], 6));
+    </script>
+</body>
+</html>

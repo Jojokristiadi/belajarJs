@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //global scope bisa diakses di fungsi manapun
+        //lokal scoope gk bisa diakses dimanapun
+
+
+        //global scope
+        const number = 2;
+
+
+        //global scoope
+        function hitme(){
+            //local scoope
+        }
+        function other(){
+            //local
+        }
+        hitme()
+        hitme()
+
+
+        function first(){
+            let firstNumber = 5;
+        }
+
+        function second(){
+            let secondNumber = 4;
+        }
+
+        first()
+        second()
+
+
+        console.log(firstNumber)
+        console.log(secondNumber)
+    </script>
+</body>
+</html>

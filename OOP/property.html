@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property</title>
+</head>
+<body>
+    <script>
+        //untuk membuat property, dengan hanya menggunakan nama variable dengan diikuti titik dan nama
+        // property
+        // untuk menambahkan property ke semua variable yg dibuat constructor function,
+        // gunakan kata kunci this.
+
+
+
+        function Person(){
+            this.firstName = "",
+            this.LastName = ""
+        }
+        const eko = new Person()
+        eko.firstName = "Eko"
+        eko.LastName = "Putranto"
+        const handi = new Person()
+        handi.LastName = "Ryan"
+        handi.firstName = "Handi"
+
+        console.info(eko)
+        console.info(handi)
+    </script>
+</body>
+</html>

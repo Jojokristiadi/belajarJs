@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        //fitur mengirimkan data sebanyak2nya ke array
+        //rest parameter cmn ada di 1 function aja 
+        //rest parameter biasanya di paling akhir kecuali ada 1 parameter
+        // disebut jga variabel argument
+
+        //contoh rest parameter
+
+        function sum(name, ...data){
+            let total = 0;
+            for(const item of data){
+            total +=item;
+        }
+        document.writeln(`<p>Total ${name} is ${total}</p>`)
+        }
+
+        sum('Orange', 5,3,5,2,2);
+        sum('Apple', 6,3,1,8);
+        sum('Melon', 4,1,6 );
+
+        //wajib pakai for(const item *of* ...data)
+
+        //spread syntac
+        //bila terlanjur memiliki array gunakan spread syntax
+        //gunakan titik 3x ... diikuti dengan arraysaat memanggil function 
+    
+        const values = [14,67,35,21,11,40,10];
+
+        sum("Test", ...values);
+
+    </script>
+</body>
+</html>

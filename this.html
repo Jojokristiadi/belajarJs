@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <script>
+        //this merupakan referensi ke object milik siapa
+        //dalam object method this merupakan referensi ke object pemilik function
+        // scope dan global = di browser window
+        // strict mode  = undefined
+
+
+        //this di global method
+        console.info(this)//windows
+
+        //this dalam function
+
+        function name(){
+            console.info(this)
+            function inner(){
+                console.info(this)
+            }
+            inner()
+        }
+        name()
+
+
+        //this dalam object method
+
+        const person = {
+            name : "Rehan",
+            sayHello : function (name){
+                //this person
+                console.info(`Hi ${name}, my name is ${this.name}`)
+            }
+        }
+         person.sayHello("Joko");
+    </script>
+</body>
+</html>

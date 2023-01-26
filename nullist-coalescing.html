@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nullist coalescing</title>
+</head>
+<body>
+    <script>
+        //nullish coalescing merupakan null dan undefined
+        //mirip ternary operator
+        //perbedaannya bila null/undefined, value default diambil
+
+        /*
+        tanpa nullish coalescing
+        let parameter;
+        let data = parameter;
+
+        if(data ==undefined || data == null){
+            data = "nilai default";
+        }
+        alert(data);
+
+        */
+
+        //pake nullish coalescing
+
+        let parameter = null;
+        let data = parameter ?? "Data default";
+
+        alert(`${data}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getter Setter</title>
+</head>
+<body>
+    <script>
+        //kemampuan untuk membuat function yang berbeda dalam mengambil dan membuat pada data object property
+        //membuat validasi pada dalam function
+        
+        
+        //kode getter
+        const person = {
+            firstName : "Andi",
+            lastName : "Prayoga",
+            //membuat object
+            get fullName (){
+                return `${this.firstName} ${this.lastName}`
+            },
+            set fullName(value){
+                console.info(`Mengubah Full Name ${value} `)
+
+                //membuat split
+                const array = value.split(" ")
+                this.firstName = array[0]
+                this.lastName = array[1]
+            }
+        }
+        person.fullName="Dwi Nugraha";
+
+        //otomatis melakukan pemanggilan fullname
+        // person.firstName = "Irfan";
+        // console.info(person.fullName);
+
+        //untuk buat setter, kita tidak perlu membuat parameter tanpa kurung tutup. 
+        person.fullName = "Ginting Syeful"
+        console.table(person)        
+        person.fullName = "Rina Widya"
+        console.table(person)
+        person.fullName = "Puput Lilia"
+        console.table(person)
+    </script>
+</body>
+</html>

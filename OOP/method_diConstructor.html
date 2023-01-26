@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //bila kita membuat constructor function, secara otomatis semua akan memiliki method tersebut.
+
+        function Person(){
+            this.firstName = "",
+            this.lastName = ""
+
+            this.sayHello = function (name){
+                document.writeln(`Hello ${name}, my name is ${this.firstName}`)
+            }
+
+        }
+        const eko = new Person()
+        eko.firstName = "Eko"
+        eko.lastName = "Putranto"
+        eko.sayHello ("Joko")
+
+
+        const handi = new Person()
+        handi.lastName = "Ryan"
+        handi.firstName = "Handi"
+        handi.sayHello("Joko")
+
+        console.info(eko)
+        console.info(handi)
+    </script>
+</body>
+</html>

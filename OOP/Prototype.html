@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        //javascript dikenal dengan program berbasis prototype
+        //prototype di js bikin bingung
+       // erat kaitannya dengan inheritance 
+       //saat membuat object pada constructor function, object tsb disebut instance 
+       // semua property akan ditempatkan didalam instance
+       
+       
+       //saat dibuat object instance , otomatis object tersebut adalah pewarisan constructor.prototype
+       // akses prototype dengan menggunakan _proto_
+
+
+       //buat object instance
+       function Person(firstName,lastName){
+            this.firstName = firstName
+            this.lastName = lastName
+            this.sayHello = function (name){
+                document.writeln(`Hello ${name}, my name is ${this.firstName}`)
+            }
+
+        }
+
+       const eko = new Person("Eko", "Khannedy")
+       // Kita coba bahwa  ini tidak akan mengganggu property lain meskipun 1 prototype 
+
+    //    eko.sayBye = function(){
+    //     console.info("Good Bye")
+    //    }
+
+
+       const rudi = new Person("Rudi", "Tabuti")
+
+       console.info(eko)
+       console.info(rudi)
+
+       // _proto_ merupakan sebuah pewarisan dari apa yang berada di prototype, jadi Person.prototype
+       // object.prototype
+
+
+       /*
+       Menambah property ke prototype
+
+       Property mirip object kita bisa menambah object value maupun method 
+       */
+
+       // ini caranya !! dibandingakn cara di baris 33
+       Person.prototype.sayBye = function(){
+        console.info("Good Bye")
+       }
+
+       Person.prototype.run = function(){
+        console.info(`${this.firstName} is running`)
+       }
+
+       //cara kerja prototype inheritance 
+       //saat akses property di object instance maka akan check _proto_ 
+       // bila tidak ada, maka akan di check _proto_ lebih dalam lagi
+
+       eko.sayBye()
+       eko.run()
+    </script>
+</body>
+</html>

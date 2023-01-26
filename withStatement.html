@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>with statement</title>
+</head>
+<body>
+    <script>
+        //melakukan akses properti tanpa harus sebutin datanya
+
+        //tanpa pake with statement
+        const person = {
+            Name : "Joko",
+            Age : 16,
+            Address : "Indonesia"
+        };
+
+        console.info(person.Address);
+        console.info(person.Name);
+        console.info(person.Age);
+
+        //kalau pake with
+
+        with(person){
+            console.info(Address);
+            console.info(Age);
+            console.info(Name);
+        }
+    </script>
+</body>
+</html>

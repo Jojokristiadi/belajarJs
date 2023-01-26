@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict mode</title>
+</head>
+<body>
+    <script>
+        //bila error akan diberi tahu
+        //memperbaiki beberapa kesalahan enginer javascript untuk optimasi
+        //cara menyalakan nya adlaah mengetikan 'use strict' di awal javascript
+
+        function useStrictMode (){
+            //tambahkan use strict disini.
+
+            'useStrict'
+            const person = {
+                firstName : "Reza",
+                lastName : "Rahadian"
+            }
+            with (person){
+                console.info(firstName)
+            }
+        }
+    </script>
+</body>
+</html>

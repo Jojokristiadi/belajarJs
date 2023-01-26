@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //secara default, class di javascript adalah function
+        //, maka dapat membuat function di dalam parameter
+        //constructor function sama seperti function biasa 
+
+        //contoh 
+        function Person(firstName,lastName){
+            //mengubah mengambil dari paramter mana
+            // this.firstName = "",
+            // this.lastName = ""
+            this.firstName = firstName
+            this.lastName = lastName
+
+            this.sayHello = function (name){
+                document.writeln(`Hello ${name}, my name is ${this.firstName}`)
+            }
+
+        }
+        const eko = new Person("Rudi", "Tabuti")
+        eko.sayHello ("Joko")
+
+
+        const handi = new Person("Ryan", "Handi")
+        handi.sayHello("Joko")
+
+        console.info(eko)
+        console.info(handi)
+    </script>
+        }
+    </script>
+</body>
+</html>
