@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instance Of</title>
+</head>
+<body>
+    <script>
+        //untuk mengecek apakah object termasuk kedalam instance dari class tertentu atau bukan
+        // gunakan operator typeof hasilnya adalah object 
+        //operator instanceof akan menghasilkan boolean
+        // true = object adalah instance
+        // false  = bukan
+
+
+        class Employee {
+
+        }
+        class Manager {
+
+        }
+
+        const budi = new Employee()
+        const eko = new Manager()
+
+
+        //nyoba 
+        console.info(budi instanceof Manager)
+        console.info(budi instanceof Employee)
+        console.info(eko instanceof Manager)
+        console.info(eko instanceof Employee)
+
+
+        //buat ngecek ini obj atau bukan
+
+        console.info(typeof budi )
+        console.info(typeof eko)
+
+        //operator instanceof bisa digunakan untuk yg pewarisan
+
+        class Ketua {
+
+        }
+
+        class WakilKetua extends Ketua {
+
+        }
+
+        const rudi = new Ketua()
+        const Dimas  = new WakilKetua()
+
+
+        //nyoba 
+        console.info(rudi instanceof Ketua)
+        console.info(rudi instanceof WakilKetua)
+        console.info(Dimas  instanceof Ketua)
+        console.info(Dimas  instanceof WakilKetua)
+
+
+        //buat ngecek ini obj atau bukan
+
+        console.info(typeof rudi )
+        console.info(typeof Dimas )
+    </script>
+</body>
+</html>
