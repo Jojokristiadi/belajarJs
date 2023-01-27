@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public and Field</title>
+</head>
+<body>
+    <script>
+        //umumnya, saat ingin menambhakn field kita nambahkan di field
+        //namun bisa ditempatkan diluar constructor selevel dengan method
+        //buat public class dan private class
+        // Untuk membuat public class field, 
+        //kita bisa langsung buat nama field dengan value nya selevel dengan method
+
+        class Customer {
+            firstName;
+            lastName;
+            balance = 0
+
+            constructor(firstName,lastName){
+                this.firstName = firstName;
+                this.lastName = lastName;
+
+            } 
+        }
+        const eko = new Customer("Eko", "Khannedy")
+        console.info(eko)
+
+    </script>
+</body>
+</html>

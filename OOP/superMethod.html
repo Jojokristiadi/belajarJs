@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Method</title>
+</head>
+<body>
+    <script>
+        // super key digunakan untuk mengakses parent class
+        // caranya super titik nama class
+        // dgn kata lain, super merupakan reference dari _proto_
+
+        class Shape {
+            //buat method
+            paint() {
+                console.info("Paint shape")
+            }
+        }
+
+        class Circle extends Shape{
+            paint(){
+                super.paint() //memanggil paint method parent class
+                console.info("Paint Curve")
+            }
+        }
+
+        const circle = new Circle()
+        circle.paint()
+    </script>
+</body>
+</html>
