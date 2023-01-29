@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflex</title>
+</head>
+<body>
+    <script>
+        //class yang digunakan untuk mengesekusi javascript function
+        //reflect tidak punya constructor 
+        // penggunaan reflect banyak sekali method yang digunakan 
+        const person = {};
+//tidak menyentuh functionnya
+// lebih ribet saya bilang.
+Reflect.set(person, "firstName", "Eko");
+Reflect.set(person, "lastName", "Khannedy");
+
+console.info(person);
+
+console.info(Reflect.get(person, "firstName"));
+console.info(Reflect.get(person, "lastName"));
+
+console.info(Reflect.has(person, "firstName"));
+console.info(Reflect.has(person, "middleName"));
+console.info(Reflect.has(person, "lastName"));
+
+</script>
+</body>
+</html>
