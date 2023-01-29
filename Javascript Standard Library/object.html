@@ -9,7 +9,7 @@
 
     {
         // object freeze & seal
-
+        //object freeze tidak bisa diubah isinya atau dihapus attribute nya.
         const person = {
             firstName: "Eko",
             lastName: "Khannedy"
@@ -17,7 +17,7 @@
 
         Object.freeze(person);
         // Object.seal(person);
-
+        //object seal bisa mengganti isi nya namun tidak bisa menghapus attribute nya.
         person.firstName = "Budi";
         person.middleName = "Kurniawan";
         delete person.lastName;
@@ -28,7 +28,8 @@
     {
 
         // object assign
-
+        // untuk menggabungkan semua attribute dari sebuah object ke object lain
+        // Object.assign(target, source)
         const target = {
             firstName: "Eko"
         };
@@ -45,8 +46,10 @@
     {
 
         // Object property name & value
-
-        const person = {
+        // Object juga punya static method untuk mengambil properties names and values
+        // Object.values (untuk mengambil semua properties value)
+        // Object.getPropertyNames () berfungsi untuk mengambil semua properties name
+         const person = {
             firstName: "Eko",
             lastName: "Khannedy"
         };
