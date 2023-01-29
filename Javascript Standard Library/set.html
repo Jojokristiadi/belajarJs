@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+</head>
+<body>
+    <script>
+        //seperti array, cmn ini mintanya yg unique
+        //bila unique maka diterima, bila tidak, maka gk akan masuk ke set ini
+        const set = new Set();
+
+set.add("Eko");
+set.add("Eko");
+set.add("EKO");
+set.add("Kurniawan");
+set.add("Khannedy");
+
+console.info(set);
+// EKo cmn muncul 1 kali
+//beda penulisan, kapital diterima
+
+set.forEach((value) => console.info(value));
+
+</script>
+</body>
+</html>
